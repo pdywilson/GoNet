@@ -57,18 +57,18 @@ readme:
 for creating databases there are several options which need to be configured before calling createDB:
 1. choose an id_list (list of id's which will be extracted from the dgs folder
 2. choose a name for your new db
-3. aditional argument: choose mode = 'move' if you want to create a db with (board,dirac-distributions) as fundamental
+3. additional argument: choose mode = 'move' if you want to create a db with (board,dirac-distributions) as fundamental
 data structure
 4. additional argument: choose expandDB = True if you want to additionally enrich the database by copying the
 distributions as often as the board was played
 
 Stefans Notiz: Expand = board duplicates. "dist" = Absolute Board Verteilungen, "moves" = Dirac-Verteilungen.
 '''
-#createDB('data_4_5369', 'data_4', mode='move', expandDB=True)
+createDB('dan_data_295', 'dan_data_295', mode='move', expandDB=False)
 
 
 def test():
-    db_name = "data_3"
+    db_name = "data_4"
     con = sqlite3.connect(r"DB/Move/" + db_name, detect_types=sqlite3.PARSE_DECLTYPES)
     cur = con.cursor()
     cur.execute("select count(*) from movedata")
@@ -76,4 +76,4 @@ def test():
     con.close()
     print("datasize", datasize[0])
 
-test()
+#test()

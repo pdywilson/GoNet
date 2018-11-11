@@ -46,7 +46,6 @@ Parameters:
     [1, 30, inf] keep the computation time in mind! in case, better run many small Trainings so the results are not lost!
 
 On saving and loading weights:
-    FYI, weights can be loaded and saved into a folder < Saved_Weights > which is already in git.ignore. Please create this folder if it does not exist yet.
     FYI, weights can be loaded and saved into a folder < Saved_Weights > which is already in git.ignore. 
     Please create this folder if it does not exist yet.
     Let's say your trained your PolicyNet called Martha, then:
@@ -348,9 +347,9 @@ if your_name is "Beno":
     [epochs,duration_in_hours] = [1,0]
     sample_proportion = 0.05
     db_move = True
-    db_name = 'data_3'
+    db_name = 'data_5'
     adaptive_rule = 'none'
-    custom_save_name = 'small_layers_3'
+    custom_save_name = 'small_layers_6'
     momentum = 0
     if os.path.isfile("logs/" + custom_save_name) is False:
         fclient = open('logs/' + custom_save_name, 'w')
